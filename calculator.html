@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Calculator </title>
+
+  <!-- css link -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link href="img/logo.png" rel="icon" type="image/x-icon" /> 
+
+
+
+  <!-- font awasome -->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+<!-- font family -->
+<link href="http://fonts.cdnfonts.com/css/sf-wonder-comic" rel="stylesheet">
+                
+  <!-- bootstrap Linkup -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+  <!-- animate -->
+  <link rel="stylesheet" href="css/libs/animate.css"> 
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+.header-01{
+    font-size: 10px;
+}
+.header-02{
+    font-size: 30px;
+}
+.header-03{
+    font-size: 10px;
+    text-align: left;
+}
+
+.hover{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);
+  border: 2px solid crimson;
+  padding: 25px 10px; 
+  text-align: center;
+  color: aliceblue;
+}
+
+  .hover:hover{
+    background: chartreuse;
+    color: crimson;
+    font-weight: 900;
+  }
+  
+
+
+
+
+  .answer{ 
+    background: chartreuse;
+    color: crimson;
+    font-weight: 900;
+    text-align: end;
+    cursor:  cell;
+    padding: 10px 5px; 
+  font-size: 30px;
+  }
+
+.btn-b{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);  
+  width: 24%;
+  height: auto; 
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+}
+.equal{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);  
+  width: 24%;
+  height: 100px; 
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+  float: right;
+  margin-right: 3px;
+   
+}
+.dot{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);  
+  width: 24%;
+  height: auto; 
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+}
+
+.zero{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);  
+  width: 49%;
+  height: auto; 
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+}
+.ac{ 
+  transition: .9s;
+  background: rgb(14, 34, 212);  
+  width: 49.5%;
+  height: auto; 
+  text-align: center;
+  color: aliceblue;
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+.btn-b:hover{
+    background: chartreuse;
+    color: crimson;
+    font-weight: 900;
+  }
+  
+</style>
+</head>
+
+<body class="bg-info">
+   <h3 class="text-center"> Calculator </h3>
+  <div class="calculator m-auto" style="width: 400px; overflow: hidden; box-sizing: border-box; height: auto;  border-radius:10px;">
+      
+ 
+<div class="formstyle">
+  <form name="forms">
+<input class="w-100 answer " type="button" name="answer">
+
+<input class=" btn-b  " type="button" value="MC"  onclick="forms.answer.value ='' "> 
+
+<input class=" btn-b " type="button" value="C"  onclick=" myBack()"> 
+
+
+
+
+<input class=" btn-b bg-danger  ac" type="button" value="Ac"  onclick="forms.answer.value = '' "> 
+
+
+
+
+<input class=" btn-b " type="button" value=" power "  onclick="forms.answer.value += '**' "> 
+<input class=" btn-b " type="button" value="%"  onclick="forms.answer.value += '%' "> 
+
+<input class=" btn-b " type="button" value="*"  onclick="forms.answer.value += '*' "> 
+
+<input class=" btn-b" type="button" value="/"  onclick="forms.answer.value += '/' "> 
+
+
+
+
+<input class=" btn-b" type="button" value="1"  onclick="forms.answer.value += '1' "> 
+
+<input class=" btn-b" type="button" value="2"  onclick="forms.answer.value += '2' "> 
+
+<input class=" btn-b" type="button" value="3"  onclick="forms.answer.value += '3' "> 
+
+<input class=" btn-b" type="button" value="-"  onclick="forms.answer.value += '-' "> 
+
+
+
+<input class=" btn-b" type="button" value="4"  onclick="forms.answer.value += '4' "> 
+
+<input class=" btn-b" type="button" value="5"  onclick="forms.answer.value += '5' "> 
+
+<input class=" btn-b" type="button" value="6"  onclick="forms.answer.value += '6' "> 
+
+<input class=" btn-b" type="button" value="+"  onclick="forms.answer.value += '+' "> 
+
+
+
+<input class=" btn-b" type="button" value="7"  onclick="forms.answer.value += '7' "> 
+
+<input class=" btn-b" type="button" value="8"  onclick="forms.answer.value += '8' "> 
+
+<input class=" btn-b" type="button" value="9"  onclick="forms.answer.value += '9' "> 
+
+
+
+<input class=" btn-b equal" type="button" value="="  onclick="forms.answer.value = eval(forms.answer.value) ">
+
+<input class=" btn-b zero" type="button" value="0"  onclick="forms.answer.value += '0' ">  
+<input class=" btn-b dot" type="button" value="."  onclick="forms.answer.value += '.' ">  
+
+
+
+ 
+
+
+
+</form>
+</div>
+
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+  
+
+<script>
+ 
+  function myBack(){
+  const back = forms.answer.value;
+  forms.answer.value = back.slice(0,-1);
+}
+
+
+
+
+
+</script>
+
+</body>
+ 
+</html>
